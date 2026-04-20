@@ -4,9 +4,26 @@ import confetti from 'canvas-confetti'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const siteUrl = useRuntimeConfig().public.siteUrl.replace(/\/+$/, '')
+const canonicalUrl = `${siteUrl}/`
+const ogImageUrl = `${siteUrl}/opengraph.webp`
+
+useSeoMeta({
+  title: 'Sijil weds Rinsha',
+  ogTitle: 'Sijil weds Rinsha',
+  ogType: 'website',
+  ogUrl: canonicalUrl,
+  ogImage: ogImageUrl,
+  ogImageWidth: '1200',
+  ogImageHeight: '630',
+  ogImageAlt: 'Wedding invitation for Sijil and Rinsha',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Sijil weds Rinsha',
+  twitterImage: ogImageUrl
+})
 
 useHead({
-  title: 'Muhammed Sijil K & Rinsha K - Wedding Invitation'
+  link: [{ rel: 'canonical', href: canonicalUrl }]
 })
 
 const { countdown } = useCountdown('May 17, 2026 11:30:00')
