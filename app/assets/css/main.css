@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Georgia', 'Noto Serif', serif;
+  color: #2d2d2d;
+  background-color: #f0f0ee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  80% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes pulseHeart {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes orbFloat1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+}
+
+@keyframes orbFloat2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+}
+
+@keyframes orbFloat3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, -10px) scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkDraw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loader-overlay {
+  animation: fadeOut 2.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+.pulse-icon {
+  animation: pulseHeart 1.5s infinite ease-in-out;
+}
+
+.stagger-1,
+.stagger-2,
+.stagger-3,
+.stagger-4,
+.stagger-5,
+.stagger-6,
+.stagger-7 {
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.stagger-1 {
+  animation-delay: 2s;
+}
+
+.stagger-2 {
+  animation-delay: 2.2s;
+}
+
+.stagger-3 {
+  animation-delay: 2.4s;
+}
+
+.stagger-4 {
+  animation-delay: 2.6s;
+}
+
+.stagger-5 {
+  animation-delay: 2.8s;
+}
+
+.stagger-6 {
+  animation-delay: 3s;
+}
+
+.stagger-7 {
+  animation-delay: 3.2s;
+}
+
+.tiny-diamond::before {
+  content: '✦';
+  font-size: 8px;
+  color: #c1cfc0;
+  display: block;
+  margin: 16px auto;
+  text-align: center;
+}
+
+.bg-leaves-tl {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 200px;
+  height: 200px;
+  opacity: 0.15;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,10 Q40,30 30,60 Q50,40 80,30 Q60,10 40,20 Q20,0 20,10' fill='none' stroke='%236B8E6B' stroke-width='1.5'/%3E%3Cpath d='M30,60 Q20,80 10,70 Q25,55 30,60' fill='none' stroke='%236B8E6B' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-15deg);
+}
+
+.bg-leaves-br {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 250px;
+  height: 250px;
+  opacity: 0.15;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M80,90 Q60,70 70,40 Q50,60 20,70 Q40,90 60,80 Q80,100 80,90' fill='none' stroke='%236B8E6B' stroke-width='1.5'/%3E%3Cpath d='M70,40 Q80,20 90,30 Q75,45 70,40' fill='none' stroke='%236B8E6B' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.animate-orbFloat1 {
+  animation: orbFloat1 16s ease-in-out infinite;
+}
+
+.animate-orbFloat2 {
+  animation: orbFloat2 20s ease-in-out infinite;
+}
+
+.animate-orbFloat3 {
+  animation: orbFloat3 14s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-scale-in.delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-400 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-500 {
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-600 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-700 {
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+.animate-fade-in-up.delay-800 {
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.bg-card {
+  background-color: #fafaf8;
+}
+
+.text-green-soft,
+.text-green-accent {
+  color: #6b8e6b;
+}
+
+.text-metallic {
+  color: #4a5a4a;
+}
+
+.bg-green-light {
+  background-color: #e8f0e8;
+}
+
+.bg-green-soft\/5 {
+  background-color: rgb(107 142 107 / 0.05);
+}
+
+.bg-green-soft\/15 {
+  background-color: rgb(107 142 107 / 0.15);
+}
+
+.bg-green-soft\/30 {
+  background-color: rgb(107 142 107 / 0.3);
+}
+
+.border-green-border {
+  border-color: rgb(107 142 107 / 0.3);
+}
+
+.btn-premium-pill,
+.btn-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-premium-pill:hover,
+.btn-hover:hover {
+  transform: translateY(-2px);
+}
+
+.btn-premium-pill:hover {
+  box-shadow: 0 8px 20px rgb(107 142 107 / 0.25);
+}
+
+.btn-hover:hover {
+  box-shadow: 0 8px 25px rgb(107 142 107 / 0.3);
+}
+
+.check-draw {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: checkDraw 0.5s ease-out 0.5s forwards;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 640px) {
+  .scale-content {
+    transform: scale(0.95);
+  }
+}

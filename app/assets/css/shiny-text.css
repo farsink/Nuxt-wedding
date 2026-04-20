@@ -1,0 +1,22 @@
+.shiny-text {
+  display: inline-block;
+  background-size: 200% auto;
+  will-change: background-position;
+}
+
+.shiny-text--text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shiny-text--svg {
+  width: min(220px, 56vw);
+  aspect-ratio: 673 / 688;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
