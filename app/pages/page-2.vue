@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { useCountdown } from '~/composables/useCountdown'
 
 useHead({
@@ -10,8 +10,28 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
 
 const audio = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
-const audioStatus = ref('Click to play')
+const audioStatus = ref('Starting...')
 const iconClass = computed(() => (isPlaying.value ? 'ph-fill ph-pause' : 'ph-fill ph-play'))
+
+const startAudio = async () => {
+  if (!audio.value) {
+    return
+  }
+
+  try {
+    await audio.value.play()
+    isPlaying.value = true
+    audioStatus.value = 'Playing...'
+  } catch {
+    isPlaying.value = false
+    audioStatus.value = 'Tap to play'
+  }
+}
+
+onMounted(async () => {
+  await nextTick()
+  await startAudio()
+})
 
 const toggleAudio = async () => {
   if (!audio.value) {
@@ -25,13 +45,7 @@ const toggleAudio = async () => {
     return
   }
 
-  try {
-    await audio.value.play()
-    isPlaying.value = true
-    audioStatus.value = 'Playing...'
-  } catch {
-    audioStatus.value = 'No audio file'
-  }
+  await startAudio()
 }
 
 const onAudioEnded = () => {
@@ -103,7 +117,17 @@ const onAudioEnded = () => {
           <p class="text-[14px] text-green-accent font-medium italic leading-relaxed text-center mb-5 animate-fade-in-up delay-400">May Allah bless this gathering and fill it with barakah.</p>
 
           <div class="text-center mb-5 animate-fade-in-up delay-300">
-            <p class="text-[14px] tracking-[2px] uppercase text-green-soft font-semibold">Muhammed Sijil K & Rinsha K</p>
+            <ShinyText
+              text="Muhammed Sijil K & Rinsha K"
+              :speed="3.2"
+              :delay="0.3"
+              color="#6B8E6B"
+              shine-color="#FFFFFF"
+              :spread="120"
+              direction="left"
+              :pause-on-hover="false"
+              class-name="text-[14px] tracking-[2px] uppercase font-semibold"
+            />
           </div>
 
           <div class="flex items-center gap-4 mb-5 animate-fade-in-up delay-400">
@@ -123,11 +147,11 @@ const onAudioEnded = () => {
           </div>
 
           <div class="flex items-center justify-center gap-3 mb-5 animate-fade-in-up delay-400">
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Reception%20-%20Muhammed%20Sijil%20K%20%26%20Rinsha%20K&dates=20260517T11300000/20260517T14000000&location=JB%20Laws%20Convention%20Center%2C%20Puthananghadi&details=Wedding%20reception%20of%20Muhammed%20Sijil%20K%20and%20Rinsha%20K" target="_blank" rel="noopener noreferrer" class="btn-premium-pill inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(107,142,107,0.12)]">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Reception%20-%20Muhammed%20Sijil%20K%20%26%20Rinsha%20K&dates=20260517T11300000/20260517T14000000&location=JB%20Laws%20Convention%20Center%2C%20Puthananghadi&details=Wedding%20reception%20of%20Muhammed%20Sijil%20K%20and%20Rinsha%20K" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(107,142,107,0.12)]">
               <i class="ph ph-calendar-check" />
               Save Date
             </a>
-            <a href="https://maps.google.com/?q=JB+Laws+Convention+Center+Puthananghadi" target="_blank" rel="noopener noreferrer" class="btn-premium-pill inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(107,142,107,0.12)]">
+            <a href="https://maps.google.com/?q=JB+Laws+Convention+Center+Puthananghadi" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(107,142,107,0.12)]">
               <i class="ph ph-map-pin" />
               Location
             </a>
@@ -135,7 +159,7 @@ const onAudioEnded = () => {
 
           <div class="mb-5 animate-fade-in-up delay-500">
             <div class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-green-soft/5 border border-green-border/30">
-              <audio ref="audio" src="/music.mp3" preload="auto" @ended="onAudioEnded" />
+              <audio ref="audio" src="/audio.m4a" preload="auto" @ended="onAudioEnded" />
               <button class="w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center hover:scale-110 transition-transform" @click="toggleAudio">
                 <i :class="iconClass" />
               </button>

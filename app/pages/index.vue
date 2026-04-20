@@ -1,11 +1,27 @@
 <script setup lang="ts">
 import { useCountdown } from '~/composables/useCountdown'
+import confetti from 'canvas-confetti'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 useHead({
   title: 'Muhammed Sijil K & Rinsha K - Wedding Invitation'
 })
 
 const { countdown } = useCountdown('May 17, 2026 11:30:00')
+
+const handleRsvp = () => {
+  confetti({
+    particleCount: 120,
+    spread: 80,
+    origin: { y: 0.65 },
+    colors: ['#6B8E6B', '#8FB98F', '#FFFFFF', '#FFD700']
+  })
+  setTimeout(() => {
+    router.push('/page-2')
+  }, 500)
+}
 </script>
 
 <template>
@@ -29,21 +45,43 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
     </div>
 
     <SpotlightCard
-      class-name="w-full max-w-[540px] h-[88vh] max-h-[760px] border border-white/50 flex flex-col items-center text-center scale-content transition-all duration-500"
+      class-name="w-full max-w-[540px] h-[88vh] max-h-[760px] border border-white/50 flex flex-col items-center text-center scale-content transition-all duration-500 overflow-hidden"
       spotlight-color="rgba(107, 142, 107, 0.18)"
     >
-      <main class="relative w-full h-full overflow-y-auto scrollbar-hide px-6 sm:px-12 py-12 sm:py-16 flex flex-col items-center">
-        <div class="bg-leaves-tl" />
-        <div class="bg-leaves-br" />
+      <main class="relative w-full h-full overflow-y-auto overflow-x-hidden overscroll-x-none scrollbar-hide px-7 sm:px-12 py-12 sm:py-16 flex flex-col items-center">
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute -top-6 -left-6 sm:-top-10 sm:-left-10 lg:-top-12 lg:-left-12 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none"
+        >
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-12 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-x-[-1]"
+        >
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute -bottom-8 -left-8 sm:-bottom-12 sm:-left-12 lg:-bottom-14 lg:-left-14 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-y-[-1]"
+        >
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute -bottom-8 -right-8 sm:-bottom-12 sm:-right-12 lg:-bottom-14 lg:-right-14 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none rotate-180"
+        >
 
-      <div class="stagger-1 flex flex-col items-center w-full">
+      <div class="stagger-1 relative z-10 flex flex-col items-center w-full">
         <img src="/image.svg" alt="Bismillah" class="w-40 sm:w-38 mb-0 opacity-80">
         <p class="text-[12px] sm:text-[14px] text-brand-textMuted tracking-wide font-light uppercase mt-2">
           IN THE NAME OF ALLAH
           <br>
           THE MOST GRACIOUS & THE MOST MERCIFUL
         </p>
-        <div class="tiny-diamond w-full" />
+        <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto my-4 pointer-events-none select-none">
         <p class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-brand-textBase font-medium leading-relaxed max-w-[85%] mx-auto">
           MR. SAYDALAVI MASTER AND MRS. RAJEENA
           <br><br>
@@ -55,21 +93,47 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
         </p>
       </div>
 
-      <div class="stagger-2 mt-8 mb-6 relative w-full flex flex-col items-center z-10">
-        <div class="flex items-center justify-center gap-4 sm:gap-6 w-full">
-          <h1 class="font-vibes text-4xl sm:text-5xl text-brand-primary drop-shadow-sm -rotate-1">Muhammed Sijil K</h1>
-          <span class="text-brand-secondary text-sm sm:text-base opacity-70 animate-pulse pb-2">
-            <i class="ph-fill ph-heart" />
-          </span>
-          <h1 class="font-vibes text-4xl sm:text-5xl text-brand-primary drop-shadow-sm rotate-1">Rinsha K</h1>
+      <div class="stagger-2 relative z-10 mt-8 mb-6 w-full flex flex-col items-center text-center">
+        <h1 class="-rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
+          <ShinyText
+            text="Muhammed Sijil K"
+            :speed="5.2"
+            :delay="0.25"
+            color="#6B8E6B"
+            shine-color="#FFFFFF"
+            :spread="120"
+            direction="left"
+            :pause-on-hover="false"
+            class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
+          />
+        </h1>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">Grand S/O Late Moiduppu Kodassery<br>&amp; Mrs. Fathima</p>
+        <div class="my-5 flex items-center justify-center gap-2 sm:gap-3" aria-hidden="true">
+          <div class="relative w-12 sm:w-14 h-6 sm:h-7 overflow-hidden opacity-50 pointer-events-none select-none">
+            <img src="/heart.svg" alt="" class="absolute left-0 top-1/2 -translate-y-1/2 w-24 sm:w-28 max-w-none h-auto">
+          </div>
+          <span class="font-playfair text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-brand-textBase">Weds</span>
+          <div class="relative w-12 sm:w-14 h-6 sm:h-7 overflow-hidden opacity-50 pointer-events-none select-none">
+            <img src="/heart.svg" alt="" class="absolute right-0 top-1/2 -translate-y-1/2 w-24 sm:w-28 max-w-none h-auto">
+          </div>
         </div>
-        <div class="flex items-center justify-center gap-6 sm:gap-12 w-full mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic text-center">
-          <p>Grand S/O Late Moiduppu Kodassery<br>&amp; Mrs. Fathima</p>
-          <p>D/O Mr. Abdul Razak Master<br>&amp; Mrs. Kamarulnisa</p>
-        </div>
+        <h1 class="rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
+          <ShinyText
+            text="Rinsha K"
+            :speed="5.2"
+            :delay="0.45"
+            color="#6B8E6B"
+            shine-color="#FFFFFF"
+            :spread="120"
+            direction="left"
+            :pause-on-hover="false"
+            class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
+          />
+        </h1>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Mr. Abdul Razak Master<br>&amp; Mrs. Kamarulnisa</p>
       </div>
 
-      <div class="stagger-3 mt-4 w-full flex justify-center">
+      <div class="stagger-3 relative z-10 mt-4 w-full flex justify-center">
         <div class="border border-brand-secondary/70 rounded-[14px] bg-white flex w-full max-w-[380px] shadow-sm relative overflow-hidden">
           <div class="flex-1 flex flex-col items-center justify-center py-3 px-2">
             <span class="text-[11px] font-bold tracking-widest text-brand-primary uppercase">May</span>
@@ -85,8 +149,8 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
         </div>
       </div>
 
-      <div class="stagger-4 mt-8 w-full">
-        <div class="tiny-diamond w-full mt-0 mb-6" />
+      <div class="stagger-4 relative z-10 mt-8 w-full">
+        <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto mb-6 pointer-events-none select-none">
         <p class="text-[11px] sm:text-[13px] italic text-brand-textMuted mb-6 px-4 font-georgia">
           Sharing the Happiness and compliments from<br>Muhammed Shibin K and family
         </p>
@@ -99,7 +163,17 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
         </div>
       </div>
 
-      <div class="stagger-5 mt-10 w-full">
+      <div class="stagger-5 relative z-10 mt-10 w-full">
+        <div class="mb-7 w-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Reception%20-%20Muhammed%20Sijil%20K%20%26%20Rinsha%20K&dates=20260517T11300000/20260517T14000000&location=JB%20Laws%20Convention%20Center%2C%20Puthananghadi&details=Wedding%20reception%20of%20Muhammed%20Sijil%20K%20and%20Rinsha%20K" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border/50 shadow-[0_2px_10px_rgba(107,142,107,0.12)] whitespace-nowrap">
+            <i class="ph ph-calendar-check" />
+            Save Date
+          </a>
+          <a href="https://maps.google.com/?q=JB+Laws+Convention+Center+Puthananghadi" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border/50 shadow-[0_2px_10px_rgba(107,142,107,0.12)] whitespace-nowrap">
+            <i class="ph ph-map-pin" />
+            Location
+          </a>
+        </div>
         <p class="text-[9px] sm:text-[10px] tracking-[0.2em] text-brand-textMuted uppercase mb-5">Countdown to Reception</p>
         <div class="flex items-center justify-center gap-3 sm:gap-5">
           <div class="flex flex-col items-center gap-2">
@@ -127,24 +201,24 @@ const { countdown } = useCountdown('May 17, 2026 11:30:00')
             <span class="text-[8px] sm:text-[9px] uppercase tracking-widest text-brand-textMuted">Sec</span>
           </div>
         </div>
-        <div class="tiny-diamond w-full mt-6 mb-2" />
+        <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto mt-6 mb-2 pointer-events-none select-none">
       </div>
 
-      <div class="stagger-6 mt-6 w-full flex flex-col items-center">
+      <div class="stagger-6 relative z-10 mt-6 w-full flex flex-col items-center">
         <p class="text-[10px] tracking-[0.2em] text-brand-textMuted uppercase mb-6 font-medium text-center">Kindly Confirm Your Presence</p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center max-w-[380px]">
-          <NuxtLink to="/page-2" class="flex-1 bg-brand-primary text-white font-georgia text-sm sm:text-base py-3 sm:py-3.5 px-4 rounded-[12px] shadow-lg shadow-brand-primary/20 hover:shadow-btn-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 group">
+        <div class="flex flex-row gap-2 sm:gap-4 w-full justify-center max-w-[380px]">
+          <button @click="handleRsvp" class="flex-1 min-w-0 bg-brand-primary text-white font-georgia text-xs sm:text-base py-3 sm:py-3.5 px-3 sm:px-4 rounded-[12px] shadow-lg shadow-brand-primary/20 hover:shadow-btn-hover hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2 group whitespace-nowrap cursor-pointer">
             <span>Yes, In Sha Allah!</span>
             <span class="text-lg group-hover:scale-110 transition-transform">🥳</span>
-          </NuxtLink>
-          <NuxtLink to="/page-2" class="flex-1 bg-brand-bg text-brand-btnRedText border border-brand-btnRedBorder font-georgia text-sm sm:text-base italic py-3 sm:py-3.5 px-4 rounded-[12px] hover:bg-red-50/50 transition-colors duration-300 flex items-center justify-center gap-2">
+          </button>
+          <NuxtLink to="/page-not-coming" class="flex-1 min-w-0 bg-brand-bg text-brand-btnRedText border border-brand-btnRedBorder font-georgia text-xs sm:text-base italic py-3 sm:py-3.5 px-3 sm:px-4 rounded-[12px] hover:bg-red-50/50 transition-colors duration-300 flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap">
             <span>Can't make it</span>
             <span class="text-lg opacity-80">😔</span>
           </NuxtLink>
         </div>
       </div>
 
-      <div class="stagger-7 mt-8 w-full text-center">
+      <div class="stagger-7 relative z-10 mt-8 w-full text-center">
         <p class="text-[10px] sm:text-[11px] text-brand-textMuted italic font-light tracking-wide">
           We look forward to celebrating this joyous occasion with you
         </p>
