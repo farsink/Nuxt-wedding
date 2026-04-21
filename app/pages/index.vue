@@ -79,7 +79,7 @@ const handleRsvp = () => {
         </p>
         <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto my-4 pointer-events-none select-none">
         <p class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-brand-textBase font-medium leading-relaxed max-w-[85%] mx-auto">
-          MR. SAYDALAVI MASTER AND MRS. RAJEENA
+          MR. SAYDALAVI AND MRS. RAJEENA
           <br><br>
           MOST WARMLY REQUEST YOUR PRESENCE WITH FAMILY
           <br>
@@ -126,7 +126,7 @@ const handleRsvp = () => {
             class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
           />
         </h1>
-        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Mr. Abdul Razak Master<br>&amp; Mrs. Kamarulnisa</p>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Mr. Abdul Razak <br>&amp; Mrs. Kamarulnisa</p>
       </div>
 
       <div class="stagger-3 relative z-10 mt-4 w-full flex justify-center">
