@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const siteUrl = useRuntimeConfig().public.siteUrl
-
+const siteUrl =  "https://shihaswednasniya.netlify.app/"
 useHead({
   title: 'Wedding invitation for Mohammed Shihas and Nasniya Varda',
   meta: [
