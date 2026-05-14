@@ -5,14 +5,14 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const { countdown } = useCountdown('May 17, 2026 11:30:00')
+const { countdown } = useCountdown('May 21, 2026 11:30:00')
 
 const handleRsvp = () => {
   confetti({
     particleCount: 120,
     spread: 80,
     origin: { y: 0.65 },
-    colors: ['#6B8E6B', '#8FB98F', '#FFFFFF', '#FFD700']
+    colors: ['#C9A66B', '#E4CCAA', '#FFFFFF', '#FBF7F1']
   })
   setTimeout(() => {
     router.push('/page-2')
@@ -21,7 +21,7 @@ const handleRsvp = () => {
 </script>
 
 <template>
-  <div class="h-screen overflow-hidden flex items-center justify-center p-4 sm:p-8 relative selection:bg-brand-secondary selection:text-white">
+  <div class="h-screen overflow-hidden flex items-center justify-center p-2 sm:p-8 relative selection:bg-brand-secondary selection:text-white">
     <div class="loader-overlay fixed inset-0 bg-brand-bg z-50 flex flex-col items-center justify-center font-playfair">
       <ShinyText
         svg-src="/bismillah.svg"
@@ -41,33 +41,70 @@ const handleRsvp = () => {
     </div>
 
     <SpotlightCard
-      class-name="w-full max-w-[540px] h-[88vh] max-h-[760px] border border-white/50 flex flex-col items-center text-center scale-content transition-all duration-500 overflow-hidden"
-      spotlight-color="rgba(107, 142, 107, 0.18)"
+      class-name="w-full max-w-[540px] h-[98vh] max-h-[760px] border border-white/50 flex flex-col items-center text-center scale-content transition-all duration-500 overflow-hidden"
+      spotlight-color="rgba(228, 204, 170, 0.24)"
     >
+      <img
+        src="/topright.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-0 left-0 w-24 sm:w-28 lg:w-32 opacity-[0.2] sm:opacity-[0.1] pointer-events-none select-none z-0 scale-x-[-1]"
+      >
+      <img
+        src="/topright.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute top-0 right-0 w-24 sm:w-28 lg:w-32 opacity-[0.1] sm:opacity-[0.1] pointer-events-none select-none z-0"
+      >
+      <img
+        src="/bottomleft.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute bottom-0 left-0 w-24 sm:w-28 lg:w-32 opacity-[0.16] sm:opacity-[0.1] pointer-events-none select-none z-0"
+      >
+      <img
+        src="/bottomright.svg"
+        alt=""
+        aria-hidden="true"
+        class="absolute bottom-0 right-0 w-24 sm:w-28 lg:w-32 opacity-[0.16] sm:opacity-[0.1] pointer-events-none select-none z-0"
+      >
+
       <main class="relative w-full h-full overflow-y-auto overflow-x-hidden overscroll-x-none scrollbar-hide px-7 sm:px-12 py-12 sm:py-16 flex flex-col items-center">
         <img
           src="/decoration.svg"
           alt=""
           aria-hidden="true"
-          class="absolute -top-6 -left-6 sm:-top-10 sm:-left-10 lg:-top-12 lg:-left-12 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none"
+          class="absolute top-18 left-2 sm:top-20 sm:left-4 lg:top-22 lg:left-6 w-12 sm:w-16 lg:w-20 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none"
         >
         <img
           src="/decoration.svg"
           alt=""
           aria-hidden="true"
-          class="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 lg:-top-12 lg:-right-12 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-x-[-1]"
+          class="absolute top-18 right-2 sm:top-20 sm:right-4 lg:top-22 lg:right-6 w-12 sm:w-16 lg:w-20 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-x-[-1]"
         >
         <img
           src="/decoration.svg"
           alt=""
           aria-hidden="true"
-          class="absolute -bottom-8 -left-8 sm:-bottom-12 sm:-left-12 lg:-bottom-14 lg:-left-14 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-y-[-1]"
+          class="absolute bottom-16 left-2 sm:bottom-18 sm:left-4 lg:bottom-20 lg:left-6 w-12 sm:w-16 lg:w-20 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none scale-y-[-1]"
         >
         <img
           src="/decoration.svg"
           alt=""
           aria-hidden="true"
-          class="absolute -bottom-8 -right-8 sm:-bottom-12 sm:-right-12 lg:-bottom-14 lg:-right-14 w-20 sm:w-28 lg:w-32 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none rotate-180"
+          class="absolute bottom-16 right-2 sm:bottom-18 sm:right-4 lg:bottom-20 lg:right-6 w-12 sm:w-16 lg:w-20 opacity-[0.08] sm:opacity-[0.10] pointer-events-none select-none rotate-180"
+        >
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute top-[8.5rem] sm:top-[9.5rem] w-24 sm:w-32 lg:w-36 opacity-[0.06] pointer-events-none select-none"
+        >
+        <img
+          src="/decoration.svg"
+          alt=""
+          aria-hidden="true"
+          class="absolute bottom-[6.5rem] sm:bottom-[7.5rem] w-24 sm:w-32 lg:w-36 opacity-[0.06] pointer-events-none select-none rotate-180"
         >
 
       <div class="stagger-1 relative z-10 flex flex-col items-center w-full">
@@ -79,23 +116,20 @@ const handleRsvp = () => {
         </p>
         <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto my-4 pointer-events-none select-none">
         <p class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-brand-textBase font-medium leading-relaxed max-w-[85%] mx-auto">
-          MR. SAYDALAVI AND MRS. RAJEENA
-          <br><br>
           MOST WARMLY REQUEST YOUR PRESENCE WITH FAMILY
           <br>
           FOR THE WEDDING CEREMONY OF
-          <br>
-          OUR BELOVED SON
         </p>
       </div>
 
       <div class="stagger-2 relative z-10 mt-8 mb-6 w-full flex flex-col items-center text-center">
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">S/O Hassan<br>&amp; Sajila</p>
         <h1 class="-rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
           <ShinyText
-            text="Muhammed Sijil K"
+            text="Mohammed Shihas"
             :speed="5.2"
             :delay="0.25"
-            color="#6B8E6B"
+            color="#8A1236"
             shine-color="#FFFFFF"
             :spread="120"
             direction="left"
@@ -103,22 +137,15 @@ const handleRsvp = () => {
             class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
           />
         </h1>
-        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">Grand S/O Late Moiduppu Kodassery<br>&amp; Mrs. Fathima</p>
-        <div class="my-5 flex items-center justify-center gap-2 sm:gap-3" aria-hidden="true">
-          <div class="relative w-12 sm:w-14 h-6 sm:h-7 overflow-hidden opacity-50 pointer-events-none select-none">
-            <img src="/heart.svg" alt="" class="absolute left-0 top-1/2 -translate-y-1/2 w-24 sm:w-28 max-w-none h-auto">
-          </div>
-          <span class="font-playfair text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-brand-textBase">Weds</span>
-          <div class="relative w-12 sm:w-14 h-6 sm:h-7 overflow-hidden opacity-50 pointer-events-none select-none">
-            <img src="/heart.svg" alt="" class="absolute right-0 top-1/2 -translate-y-1/2 w-24 sm:w-28 max-w-none h-auto">
-          </div>
+        <div class="my-4 flex items-center justify-center" aria-hidden="true">
+          <span class="font-playfair text-4xl sm:text-5xl leading-none opacity-85 text-brand-primary">&amp;</span>
         </div>
         <h1 class="rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
           <ShinyText
-            text="Rinsha K"
+            text="Nasniya Varda"
             :speed="5.2"
             :delay="0.45"
-            color="#6B8E6B"
+            color="#8A1236"
             shine-color="#FFFFFF"
             :spread="120"
             direction="left"
@@ -126,19 +153,19 @@ const handleRsvp = () => {
             class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
           />
         </h1>
-        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Mr. Abdul Razak <br>&amp; Mrs. Kamarulnisa</p>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Musthafa <br>&amp; Hairuneesa</p>
       </div>
 
       <div class="stagger-3 relative z-10 mt-4 w-full flex justify-center">
         <div class="border border-brand-secondary/70 rounded-[14px] bg-white flex w-full max-w-[380px] shadow-sm relative overflow-hidden">
           <div class="flex-1 flex flex-col items-center justify-center py-3 px-2">
-            <span class="text-[11px] font-bold tracking-widest text-brand-primary uppercase">May</span>
-            <span class="text-[9px] text-brand-textMuted mt-1 uppercase">2026, Sunday</span>
+            <span class="font-playfair text-[11px] font-semibold tracking-widest text-brand-textMuted uppercase">May</span>
+            <span class="font-playfair text-[9px] text-brand-textMuted mt-1 uppercase">2026, Thursday</span>
           </div>
           <div class="border-x border-brand-secondary/40 px-6 py-2 flex items-center justify-center bg-brand-bg/50">
-            <span class="font-playfair text-4xl sm:text-5xl font-medium text-brand-primary">17</span>
+            <span class="font-playfair text-4xl sm:text-5xl font-semibold text-brand-textMuted">21</span>
           </div>
-          <div class="flex-1 flex flex-col items-center justify-center py-3 px-2 text-[10px] font-medium text-brand-textBase tracking-wider">
+          <div class="flex-1 flex flex-col items-center justify-center py-3 px-2 font-playfair text-[10px] font-medium text-brand-textMuted tracking-wider">
             <span>11:30 AM -</span>
             <span class="mt-0.5">2:00 PM</span>
           </div>
@@ -147,30 +174,27 @@ const handleRsvp = () => {
 
       <div class="stagger-4 relative z-10 mt-8 w-full">
         <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto mb-6 pointer-events-none select-none">
-        <p class="text-[11px] sm:text-[13px] italic text-brand-textMuted mb-6 px-4 font-georgia">
-          Sharing the Happiness and compliments from<br>Muhammed Shibin K and family
-        </p>
-        <h2 class="font-playfair text-lg sm:text-xl font-semibold text-brand-primary tracking-widest uppercase mb-3 px-4 leading-relaxed">
-          JB LAWNS CONVENTION CENTER
+        <h2 class="font-playfair text-lg sm:text-xl font-semibold text-brand-textMuted tracking-widest uppercase mb-3 px-4 leading-relaxed">
+          NAZ AUDITORIUM
         </h2>
         <div class="flex items-start justify-center gap-2 text-[11px] sm:text-[13px] text-brand-textMuted max-w-[80%] mx-auto leading-relaxed">
           <i class="ph ph-map-pin text-brand-secondary mt-1 text-sm" />
-          <p>PUTHANANGHADI</p>
+          <p>PUZHAKKATTIRI</p>
         </div>
       </div>
 
       <div class="stagger-5 relative z-10 mt-10 w-full">
         <div class="mb-7 w-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Reception%20-%20Muhammed%20Sijil%20K%20%26%20Rinsha%20K&dates=20260517T11300000/20260517T14000000&location=JB%20Laws%20Convention%20Center%2C%20Puthananghadi&details=Wedding%20reception%20of%20Muhammed%20Sijil%20K%20and%20Rinsha%20K" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border/50 shadow-[0_2px_10px_rgba(107,142,107,0.12)] whitespace-nowrap">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Ceremony%20-%20Mohammed%20Shihas%20%26%20Nasniya%20Varda&dates=20260521T11300000/20260521T14000000&location=Naz%20Auditorium%2C%20Puzhakkattiri&details=Wedding%20ceremony%20of%20Mohammed%20Shihas%20and%20Nasniya%20Varda" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
             <i class="ph ph-calendar-check" />
             Save Date
           </a>
-          <a href="https://maps.google.com/?q=JB+Laws+Convention+Center+Puthananghadi" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border/50 shadow-[0_2px_10px_rgba(107,142,107,0.12)] whitespace-nowrap">
+          <a href="https://maps.google.com/?q=Naz+Auditorium+Puzhakkattiri" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
             <i class="ph ph-map-pin" />
             Location
           </a>
         </div>
-        <p class="text-[9px] sm:text-[10px] tracking-[0.2em] text-brand-textMuted uppercase mb-5">Countdown to Reception</p>
+        <p class="text-[9px] sm:text-[10px] tracking-[0.2em] text-brand-textMuted uppercase mb-5">Countdown to Wedding</p>
         <div class="flex items-center justify-center gap-3 sm:gap-5">
           <div class="flex flex-col items-center gap-2">
             <div class="w-[50px] h-[55px] sm:w-[60px] sm:h-[65px] border-[1.5px] border-brand-secondary/60 rounded-[20px] sm:rounded-[24px] flex items-center justify-center bg-white/50 backdrop-blur-sm shadow-sm transition-transform hover:scale-105 duration-300">

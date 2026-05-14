@@ -12,12 +12,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          bg: '#FAFAF8',
-          ambient: '#F0F0EE',
-          primary: '#6B8E6B',
-          secondary: '#C1CFC0',
-          textBase: '#2D2D2D',
-          textMuted: '#7A7A7A',
+          bg: '#FBF7F1',
+          ambient: '#F1E8DE',
+          primary: '#8A1236',
+          secondary: '#D8C5A8',
+          textBase: '#521425',
+          textMuted: '#6A4B4B',
           btnRedText: '#B85454',
           btnRedBorder: '#E0B0B0'
         }
@@ -28,8 +28,8 @@ export default {
         georgia: ['"Georgia"', '"Noto Serif"', 'serif']
       },
       boxShadow: {
-        'soft-card': '0 20px 40px -15px rgba(0,0,0,0.05), 0 0 20px rgba(107, 142, 107, 0.03)',
-        'btn-hover': '0 10px 25px -5px rgba(107, 142, 107, 0.3)'
+        'soft-card': '0 20px 40px -15px rgba(70, 52, 31, 0.05), 0 0 20px rgba(201, 166, 107, 0.07)',
+        'btn-hover': '0 10px 25px -5px rgba(201, 166, 107, 0.2)'
       }
     }
   }

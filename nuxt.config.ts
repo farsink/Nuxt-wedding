@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  vite: {
+    server: {
+      allowedHosts: true
+    }
+  },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
@@ -14,9 +19,8 @@ export default defineNuxtConfig({
       title: 'Wedding Invitation',
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png', sizes: '32x32' },
-        { rel: 'icon', type: 'image/png', href: '/favicon.png', sizes: '192x192' },
-        { rel: 'apple-touch-icon', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/favicon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {

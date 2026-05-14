@@ -1,39 +1,41 @@
 <script setup lang="ts">
+const siteUrl = useRuntimeConfig().public.siteUrl
+
 useHead({
-  title: 'Wedding invitation for Sijil and Rinsha',
+  title: 'Wedding invitation for Mohammed Shihas and Nasniya Varda',
   meta: [
     {
       name: 'description',
       content:
-        "You're warmly invited to celebrate Sijil and Rinsha. Open the wedding link for the date, venue, and full invitation details."
+        "You're warmly invited to celebrate Mohammed Shihas and Nasniya Varda. Open the wedding link for the date, venue, and full invitation details."
     },
-    { property: 'og:url', content: 'https://sijil-weds-rinsha.netlify.app/' },
+    { property: 'og:url', content: siteUrl },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Wedding invitation for Sijil and Rinsha' },
+    { property: 'og:title', content: 'Wedding invitation for Mohammed Shihas and Nasniya Varda' },
     {
       property: 'og:description',
       content:
-        "You're warmly invited to celebrate Sijil and Rinsha. Open the wedding link for the date, venue, and full invitation details."
+        "You're warmly invited to celebrate Mohammed Shihas and Nasniya Varda. Open the wedding link for the date, venue, and full invitation details."
     },
     {
       property: 'og:image',
-      content: 'https://sijil-weds-rinsha.netlify.app/opengraph.webp'
+      content: `${siteUrl}/opengraph.webp`
     },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { property: 'twitter:domain', content: 'sijil-weds-rinsha.netlify.app' },
-    { property: 'twitter:url', content: 'https://sijil-weds-rinsha.netlify.app/' },
-    { name: 'twitter:title', content: 'Wedding invitation for Sijil and Rinsha' },
+    { property: 'twitter:domain', content: new URL(siteUrl).hostname },
+    { property: 'twitter:url', content: siteUrl },
+    { name: 'twitter:title', content: 'Wedding invitation for Mohammed Shihas and Nasniya Varda' },
     {
       name: 'twitter:description',
       content:
-        "You're warmly invited to celebrate Sijil and Rinsha. Open the wedding link for the date, venue, and full invitation details."
+        "You're warmly invited to celebrate Mohammed Shihas and Nasniya Varda. Open the wedding link for the date, venue, and full invitation details."
     },
     {
       name: 'twitter:image',
-      content: 'https://sijil-weds-rinsha.netlify.app/opengraph.webp'
+      content: `${siteUrl}/opengraph.webp`
     }
   ],
-  link: [{ rel: 'canonical', href: 'https://sijil-weds-rinsha.netlify.app/' }]
+  link: [{ rel: 'canonical', href: siteUrl }]
 })
 </script>
 
