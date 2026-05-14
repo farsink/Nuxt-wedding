@@ -18,7 +18,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `${siteUrl}/opengraph.webp`
+      content: `https://shihaswednasniya.netlify.app/opengraph.webp`
     },
     { name: 'twitter:card', content: 'summary_large_image' },
     { property: 'twitter:domain', content: new URL(siteUrl).hostname },
@@ -31,7 +31,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `${siteUrl}/opengraph.webp`
+      content: `https://shihaswednasniya.netlify.app/opengraph.webp`
     }
   ],
   link: [{ rel: 'canonical', href: siteUrl }]
