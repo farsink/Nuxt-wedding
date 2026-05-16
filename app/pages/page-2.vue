@@ -170,7 +170,7 @@ const onAudioEnded = () => {
             </div>
           </div>
 
-          <a href="tel:+917994914597" class="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-primary text-white text-[14px] font-semibold tracking-wide btn-hover active:scale-[0.98] mb-4 animate-fade-in-up delay-500 shadow-[0_4px_16px_rgba(201,166,107,0.16)]">
+          <a href="tel:+918606821611" class="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-primary text-white text-[14px] font-semibold tracking-wide btn-hover active:scale-[0.98] mb-4 animate-fade-in-up delay-500 shadow-[0_4px_16px_rgba(201,166,107,0.16)]">
             <i class="ph ph-phone" />
             Contact Us
           </a>
