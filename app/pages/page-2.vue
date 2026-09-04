@@ -3,10 +3,10 @@ import { computed, nextTick, onMounted, ref } from 'vue'
 import { useCountdown } from '~/composables/useCountdown'
 
 useHead({
-  title: 'Thank You - Mohammed Shihas & Nasniya Varda'
+  title: 'Thank You - Harif & Farsana'
 })
 
-const { countdown } = useCountdown('May 21, 2026 11:30:00')
+const { countdown } = useCountdown('September 21, 2026 11:00:00')
 
 const audio = ref<HTMLAudioElement | null>(null)
 const isPlaying = ref(false)
@@ -118,7 +118,7 @@ const onAudioEnded = () => {
 
           <div class="text-center mb-5 animate-fade-in-up delay-300">
             <ShinyText
-              text="Mohammed Shihas & Nasniya Varda"
+              text="Harif & Farsana"
               :speed="3.2"
               :delay="0.3"
               color="#8A1236"
@@ -133,25 +133,25 @@ const onAudioEnded = () => {
           <div class="flex items-center gap-4 mb-5 animate-fade-in-up delay-400">
             <div class="text-center shrink-0">
               <p class="text-[32px] font-bold leading-none text-brand-secondary">21</p>
-              <p class="text-[12px] tracking-[1px] uppercase text-brand-secondary mt-1">May</p>
+              <p class="text-[12px] tracking-[1px] uppercase text-brand-secondary mt-1">September</p>
               <div class="mt-2 pt-2 border-t" style="border-color: rgb(201 166 107 / 0.35)">
-                <p class="text-[9px] tracking-[1px] uppercase text-brand-secondary">2026, Thursday</p>
-                <p class="text-[12px] font-semibold mt-0.5 text-brand-secondary">11:30 AM - 2:00 PM</p>
+                <p class="text-[9px] tracking-[1px] uppercase text-brand-secondary">2026, Monday</p>
+                <p class="text-[12px] font-semibold mt-0.5 text-brand-secondary">11:00 AM - 3:00 PM</p>
               </div>
             </div>
             <div class="w-px h-20 bg-green-border shrink-0" />
             <div class="flex-1">
-              <h3 class="text-[16px] font-bold tracking-[1.5px] uppercase text-green-accent">NAZ AUDITORIUM</h3>
-              <p class="text-[12px] text-brand-textMuted tracking-wide mt-1 leading-relaxed">PUZHAKKATTIRI</p>
+              <h3 class="text-[16px] font-bold tracking-[1.5px] uppercase text-green-accent">CELEBRATION TIME</h3>
+              <p class="text-[12px] text-brand-textMuted tracking-wide mt-1 leading-relaxed">KUNNAPPALLI</p>
             </div>
           </div>
 
           <div class="flex items-center justify-center gap-3 mb-5 animate-fade-in-up delay-400">
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Ceremony%20-%20Mohammed%20Shihas%20%26%20Nasniya%20Varda&dates=20260521T11300000/20260521T14000000&location=Naz%20Auditorium%2C%20Puzhakkattiri&details=Wedding%20ceremony%20of%20Mohammed%20Shihas%20and%20Nasniya%20Varda" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(201,166,107,0.08)]">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%20Ceremony%20-%20Harif%20%26%20Farsana&amp;dates=20260921T11000000/20260921T15000000&amp;location=Celebration%20Time%2C%20Kunnappalli&amp;details=Wedding%20ceremony%20of%20Harif%20and%20Farsana" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(201,166,107,0.08)]">
               <i class="ph ph-calendar-check" />
               Save Date
             </a>
-            <a href="https://maps.google.com/?q=Naz+Auditorium+Puzhakkattiri" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(201,166,107,0.08)]">
+            <a href="https://maps.app.goo.gl/9X5S9bt4MuqxkJXE7?g_st=iw" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center gap-2 text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2 px-8 bg-green-light/60 shadow-[0_2px_8px_rgba(201,166,107,0.08)]">
               <i class="ph ph-map-pin" />
               Location
             </a>
@@ -170,7 +170,7 @@ const onAudioEnded = () => {
             </div>
           </div>
 
-          <a href="tel:+918606821611" class="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-primary text-white text-[14px] font-semibold tracking-wide btn-hover active:scale-[0.98] mb-4 animate-fade-in-up delay-500 shadow-[0_4px_16px_rgba(201,166,107,0.16)]">
+          <a href="tel:+918921269467" class="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-brand-primary text-white text-[14px] font-semibold tracking-wide btn-hover active:scale-[0.98] mb-4 animate-fade-in-up delay-500 shadow-[0_4px_16px_rgba(201,166,107,0.16)]">
             <i class="ph ph-phone" />
             Contact Us
           </a>

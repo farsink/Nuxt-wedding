@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const { countdown } = useCountdown('May 21, 2026 11:30:00')
+const { countdown } = useCountdown('September 21, 2026 11:00:00')
 
 const handleRsvp = () => {
   confetti({
@@ -123,10 +123,10 @@ const handleRsvp = () => {
       </div>
 
       <div class="stagger-2 relative z-10 mt-8 mb-6 w-full flex flex-col items-center text-center">
-        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">S/O Hassan<br>&amp; Sajila</p>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">S/O Mr. &amp; Mrs. Kunnalan</p>
         <h1 class="-rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
           <ShinyText
-            text="Mohammed Shihas"
+            text="Harif"
             :speed="5.2"
             :delay="0.25"
             color="#8A1236"
@@ -142,7 +142,7 @@ const handleRsvp = () => {
         </div>
         <h1 class="rotate-1 drop-shadow-sm leading-[1.2] py-1 overflow-visible">
           <ShinyText
-            text="Nasniya Varda"
+            text="Farsana"
             :speed="5.2"
             :delay="0.45"
             color="#8A1236"
@@ -153,21 +153,21 @@ const handleRsvp = () => {
             class-name="inline-block font-vibes text-4xl sm:text-5xl leading-[1.2] px-4 py-4"
           />
         </h1>
-        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Musthafa <br>&amp; Hairuneesa</p>
+        <p class="mt-4 text-[11px] sm:text-[13px] text-brand-textBase italic">D/O Mr. &amp; Mrs. Ibrahim</p>
       </div>
 
       <div class="stagger-3 relative z-10 mt-4 w-full flex justify-center">
         <div class="border border-brand-secondary/70 rounded-[14px] bg-white flex w-full max-w-[380px] shadow-sm relative overflow-hidden">
           <div class="flex-1 flex flex-col items-center justify-center py-3 px-2">
-            <span class="font-playfair text-[11px] font-semibold tracking-widest text-brand-textMuted uppercase">May</span>
-            <span class="font-playfair text-[9px] text-brand-textMuted mt-1 uppercase">2026, Thursday</span>
+            <span class="font-playfair text-[11px] font-semibold tracking-widest text-brand-textMuted uppercase">September</span>
+            <span class="font-playfair text-[9px] text-brand-textMuted mt-1 uppercase">2026, Monday</span>
           </div>
           <div class="border-x border-brand-secondary/40 px-6 py-2 flex items-center justify-center bg-brand-bg/50">
             <span class="font-playfair text-4xl sm:text-5xl font-semibold text-brand-textMuted">21</span>
           </div>
           <div class="flex-1 flex flex-col items-center justify-center py-3 px-2 font-playfair text-[10px] font-medium text-brand-textMuted tracking-wider">
-            <span>11:30 AM -</span>
-            <span class="mt-0.5">2:00 PM</span>
+            <span>11:00 AM -</span>
+            <span class="mt-0.5">3:00 PM</span>
           </div>
         </div>
       </div>
@@ -175,21 +175,21 @@ const handleRsvp = () => {
       <div class="stagger-4 relative z-10 mt-8 w-full">
         <img src="/divider.svg" alt="" aria-hidden="true" class="w-[60%] sm:w-[70%] md:w-[80%] max-w-[100px] h-auto opacity-50 mx-auto mb-6 pointer-events-none select-none">
         <h2 class="font-playfair text-lg sm:text-xl font-semibold text-brand-textMuted tracking-widest uppercase mb-3 px-4 leading-relaxed">
-          NAZ AUDITORIUM
+          CELEBRATION TIME
         </h2>
         <div class="flex items-start justify-center gap-2 text-[11px] sm:text-[13px] text-brand-textMuted max-w-[80%] mx-auto leading-relaxed">
           <i class="ph ph-map-pin text-brand-secondary mt-1 text-sm" />
-          <p>PUZHAKKATTIRI</p>
+          <p>KUNNAPPALLI</p>
         </div>
       </div>
 
       <div class="stagger-5 relative z-10 mt-10 w-full">
         <div class="mb-7 w-full flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Ceremony%20-%20Mohammed%20Shihas%20%26%20Nasniya%20Varda&dates=20260521T11300000/20260521T14000000&location=Naz%20Auditorium%2C%20Puzhakkattiri&details=Wedding%20ceremony%20of%20Mohammed%20Shihas%20and%20Nasniya%20Varda" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%20Ceremony%20-%20Harif%20%26%20Farsana&amp;dates=20260921T11000000/20260921T15000000&amp;location=Celebration%20Time%2C%20Kunnappalli&amp;details=Wedding%20ceremony%20of%20Harif%20and%20Farsana" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
             <i class="ph ph-calendar-check" />
             Save Date
           </a>
-          <a href="https://maps.google.com/?q=Naz+Auditorium+Puzhakkattiri" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
+          <a href="https://maps.app.goo.gl/9X5S9bt4MuqxkJXE7?g_st=iw" target="_blank" rel="noopener noreferrer" class="btn-premium-pill btn-spotlight inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-green-accent font-semibold tracking-wide rounded-full py-2.5 px-5 sm:px-7 bg-green-light/60 border border-green-border shadow-[0_2px_10px_rgba(201,166,107,0.08)] whitespace-nowrap">
             <i class="ph ph-map-pin" />
             Location
           </a>
